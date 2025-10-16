@@ -362,3 +362,25 @@ footer a:hover {
     max-width: 360px;
   }
 }
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex; /* <-- ensures hamburger shows on mobile */
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #2e8b57;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+  }
+
+  nav.open {
+    display: flex;
+  }
+}
