@@ -48,6 +48,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ======== 🍔 HAMBURGER MENU TOGGLE ========
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("open");
+});
+
+// Optional: close menu when a link is clicked (for mobile)
+document.querySelectorAll("#nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navLinks.classList.remove("open");
+  });
+});
+
   // ======= Form Submission (Demo) =======
   const forms = document.querySelectorAll("form");
   forms.forEach((form) => {
