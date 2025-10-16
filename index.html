@@ -12,6 +12,12 @@
     <div class="logo">
       <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
     </div>
+      <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="tour.html">Virtual Tour</a>
@@ -83,5 +89,15 @@
 
   <script src="script.js"></script>
   <script src="logreg.js"></script>
+  <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navbar.classList.toggle("open");
+  });
+</script>
+
 </body>
 </html>
