@@ -44,6 +44,7 @@ if (toggleToLogin) {
   });
 }
 
+
 // ======= Form Submission (Demo) =======
 const forms = document.querySelectorAll("form");
 forms.forEach((form) => {
@@ -53,3 +54,13 @@ forms.forEach((form) => {
     form.reset();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+});
+
