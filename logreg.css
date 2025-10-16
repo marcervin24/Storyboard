@@ -1,0 +1,127 @@
+/* General body style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eafbea, #b4e7b0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+}
+
+.input-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b4e7b0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #2e7d32;
+}
+
+/* Buttons */
+.btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Redirect text */
+.redirect-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.redirect-text a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 1.5rem;
+  }
+
+  input {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+/* === Logo Styling for Auth Pages === */
+.logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.auth-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+

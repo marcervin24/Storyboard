@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriXTour | Virtual Farm Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="tour.html">Virtual Tour</a>
+      <a href="book.html">Book Now</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="hero">
+      <div class="text-section">
+        <h1>Book Your Farm Adventure Today 🌾</h1>
+        <p>Experience Semara’s Farm through an immersive virtual tour and easy online booking.</p>
+
+        <!-- LOGIN & REGISTER BUTTONS -->
+        <div class="button-group">
+          <button id="loginBtn" class="btn green">Login</button>
+          <button id="registerBtn" class="btn orange">Register</button>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <img src="img/EntranceofSemara.jpg" alt="Semara's Farm" class="floating-image">
+      </div>
+    </section>
+  </main>
+
+  <!-- LOGIN POPUP -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit" class="btn green">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- REGISTER POPUP -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeRegister">&times;</span>
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit" class="btn orange">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>📍 Semara's Farm, Tayabas, Quezon</p>
+    <p>📞 +63 912 345 6789 | ✉️ info@agrixtour.com</p>
+    <p>
+      Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">YouTube</a>
+    </p>
+    <p>© 2025 AgriXTour. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="logreg.js"></script>
+</body>
+</html>

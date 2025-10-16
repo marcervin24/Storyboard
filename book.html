@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriXTour | Book Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tour.html">Virtual Tour</a>
+      <a href="book.html" class="active">Book Now</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main class="content-page">
+    <h1>Book Your Visit 📅</h1>
+    <form class="booking-form">
+      <label>Name:</label>
+      <input type="text" required>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>Date of Visit:</label>
+      <input type="date" required>
+      <label>Number of Guests:</label>
+      <input type="number" min="1" max="20" required>
+      <button type="submit" class="btn book">Confirm Booking</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 AgriXTour. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

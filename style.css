@@ -1,0 +1,355 @@
+/* 🌿 GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 🌾 HEADER */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #2e8b57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* 🌍 NAVIGATION */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: white;
+  color: #2e8b57;
+  font-weight: 600;
+}
+
+/* 🍔 Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 🏡 HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #e3f9e5, #ffffff);
+}
+
+.text-section {
+  flex: 1;
+  max-width: 550px;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* 🔘 Buttons */
+.button-group {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: 600;
+}
+
+.btn.green {
+  background-color: #2e8b57;
+}
+.btn.green:hover {
+  background-color: #256b45;
+}
+
+.btn.orange {
+  background-color: #f0a500;
+}
+.btn.orange:hover {
+  background-color: #d18b00;
+}
+
+/* 🖼️ IMAGE SECTION */
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.floating-image {
+  width: 90%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* 📄 CONTENT PAGES */
+.content-page {
+  padding: 80px 60px;
+  background: #fff;
+  text-align: center;
+}
+
+.content-page h1 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.content-page p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #555;
+}
+
+/* 🧾 FORMS */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #f5fff6;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2e8b57;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #2e8b57;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.3);
+}
+
+/* ====== Popup Modal Styles ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  animation: popup 0.4s ease;
+}
+
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  color: #333;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Inputs inside modal */
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #b4e7b0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal-content input:focus {
+  border-color: #2e7d32;
+}
+
+/* 🌍 FOOTER */
+footer {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #2e8b57;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 15px 0;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+  }
+
+  .floating-image {
+    max-width: 360px;
+  }
+}
+/* ===== STICKY FOOTER FIX ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer to bottom */
+  padding: 2rem;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
