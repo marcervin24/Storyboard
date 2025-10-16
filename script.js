@@ -57,10 +57,11 @@ forms.forEach((form) => {
   });
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav-links');
 
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
-  nav.classList.toggle("open");
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  nav.classList.toggle('open');
 });
+
