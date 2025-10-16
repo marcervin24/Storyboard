@@ -1,18 +1,25 @@
-// ======= Mobile Navigation Toggle =======
+// ======= MAIN SCRIPT =======
 document.addEventListener("DOMContentLoaded", () => {
+  // ======= 🍔 MOBILE NAV TOGGLE =======
   const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
+  const navLinks = document.getElementById("nav-links");
 
-  if (menuToggle && nav) {
+  if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
       menuToggle.classList.toggle("active");
-      nav.classList.toggle("open");
+      navLinks.classList.toggle("open");
+    });
+
+    // Optional: close menu when a link is clicked
+    document.querySelectorAll("#nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        navLinks.classList.remove("open");
+      });
     });
   }
-});
 
-// ======= Popup Login & Register Form =======
-document.addEventListener("DOMContentLoaded", () => {
+  // ======= 🔐 POPUP LOGIN & REGISTER FORM =======
   const loginBtn = document.querySelector("#login-btn");
   const popupContainer = document.querySelector(".popup-container");
   const closePopup = document.querySelector(".close-popup");
@@ -29,14 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Close popup
-  if (closePopup) {
+  if (closePopup && popupContainer) {
     closePopup.addEventListener("click", () => {
       popupContainer.style.display = "none";
     });
   }
 
   // Switch between login and register
-  if (toggleToRegister && toggleToLogin) {
+  if (toggleToRegister && toggleToLogin && loginForm && registerForm) {
     toggleToRegister.addEventListener("click", () => {
       loginForm.style.display = "none";
       registerForm.style.display = "block";
@@ -48,24 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ======== 🍔 HAMBURGER MENU TOGGLE ========
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
-  navLinks.classList.toggle("open");
-});
-
-// Optional: close menu when a link is clicked (for mobile)
-document.querySelectorAll("#nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    menuToggle.classList.remove("active");
-    navLinks.classList.remove("open");
-  });
-});
-
-  // ======= Form Submission (Demo) =======
+  // ======= 📩 FORM SUBMISSION (DEMO) =======
   const forms = document.querySelectorAll("form");
   forms.forEach((form) => {
     form.addEventListener("submit", (e) => {
