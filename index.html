@@ -9,22 +9,25 @@
 <body>
   <!-- HEADER -->
   <header>
+    <!-- LOGO -->
     <div class="logo">
       <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
     </div>
-      <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
 
-  </div>
-     <nav>
-      <a href="index.html">Home</a>
+    <!-- HAMBURGER ICON -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <a href="index.html" class="active">Home</a>
       <a href="tour.html">Virtual Tour</a>
       <a href="book.html">Book Now</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <button class="menu-toggle">☰</button>
     </nav>
   </header>
 
@@ -88,17 +91,18 @@
     <p>© 2025 AgriXTour. All Rights Reserved.</p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script src="logreg.js"></script>
   <script>
-  const menuToggle = document.getElementById("menuToggle");
-  const navbar = document.getElementById("navbar");
+    // MOBILE MENU TOGGLE
+    const menuToggle = document.getElementById("menuToggle");
+    const navbar = document.getElementById("navbar");
 
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    navbar.classList.toggle("open");
-  });
-</script>
-
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active"); // animate hamburger
+      navbar.classList.toggle("open");       // show/hide nav
+    });
+  </script>
 </body>
 </html>
