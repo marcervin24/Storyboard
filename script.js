@@ -1,12 +1,15 @@
 // ======= Mobile Navigation Toggle =======
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
-}
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("open");
+    });
+  }
+});
 
 // ======= Popup Login & Register Form =======
 const loginBtn = document.querySelector("#login-btn");
@@ -44,7 +47,6 @@ if (toggleToLogin) {
   });
 }
 
-
 // ======= Form Submission (Demo) =======
 const forms = document.querySelectorAll("form");
 forms.forEach((form) => {
@@ -54,13 +56,3 @@ forms.forEach((form) => {
     form.reset();
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav-links");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
-});
-
