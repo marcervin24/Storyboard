@@ -9,25 +9,27 @@
 <body>
   <!-- HEADER -->
   <header>
-  <div class="logo">
-    <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
-  </div>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="img/Semara'sLogo.jpg" alt="Semara's Farm Logo">
+    </div>
 
-  <button class="menu-toggle" aria-label="Toggle menu">
+    <!-- HAMBURGER ICON -->
+     <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tour.html">Virtual Tour</a>
-    <a href="book.html">Book Now</a>
-    <a href="about.html" class="active">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="tour.html">Virtual Tour</a>
+      <a href="book.html">Book Now</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <!-- MAIN CONTENT -->
   <main>
@@ -92,15 +94,16 @@
   <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script src="logreg.js"></script>
-  <script>
-    // MOBILE MENU TOGGLE
-    const menuToggle = document.getElementById("menuToggle");
-    const navbar = document.getElementById("navbar");
+ <script>
+  // MOBILE MENU TOGGLE FUNCTIONALITY
+  const menuToggle = document.getElementById("menuToggle");
+  const navbar = document.getElementById("navbar");
 
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active"); // animate hamburger
-      navbar.classList.toggle("open");       // show/hide nav
-    });
-  </script>
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active"); // animate icon
+    navbar.classList.toggle("open");       // show/hide nav
+  });
+</script>
+
 </body>
 </html>
