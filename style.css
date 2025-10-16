@@ -45,6 +45,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 25px;
+  transition: all 0.4s ease;
 }
 
 nav a {
@@ -331,12 +332,13 @@ footer a:hover {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    display: none;
-    padding: 15px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
   }
 
   nav.open {
-    display: flex;
+    max-height: 300px;
   }
 
   nav a {
